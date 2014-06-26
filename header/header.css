@@ -1,0 +1,16 @@
+.page-header {
+	margin: 20px 0;
+}
+
+.page-header *{
+	display: inline-block;
+}
+
+.name {
+	margin-top: 0;
+}
+
+.page-header a{
+	float: right;
+	margin: 25px 25px 0 0;
+}
