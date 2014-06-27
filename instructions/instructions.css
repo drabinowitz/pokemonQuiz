@@ -1,0 +1,17 @@
+.instructionBody{
+	position: fixed;
+	left: 200px;
+	right: 200px;
+	top: 0;
+	bottom: 50px;
+	border: 1px solid #E2E2E2;
+	-webkit-box-shadow: rgba(102, 102, 102, 0.792157) 10px 10px 15px;
+	z-index: 200;
+	background: white;
+	text-align: center;
+	padding-top: 300px;
+	display: none;
+}
+.instructionBody p{
+	padding: 10px 30%
+}
