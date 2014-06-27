@@ -13,6 +13,11 @@
 	margin: 0px auto 10px auto;
 }
 
+.startGame > input {
+	display: block;
+	margin: 0px auto 10px auto;
+}
+
 .answers > input {
 	display: block;
 	margin: 45px auto 10px auto;
