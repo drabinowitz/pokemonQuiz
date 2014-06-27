@@ -1,0 +1,10 @@
+.pokemon {
+	border: 1px solid black;
+	-webkit-box-shadow: rgba(102, 102, 102, 0.792157) 10px 10px 15px;
+}
+
+.pokemon img {
+	border: 0;
+	height: 400px;
+	margin: 10px 0px 10px 10px;
+}

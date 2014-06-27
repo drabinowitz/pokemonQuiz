@@ -1,0 +1,20 @@
+.gameConsole {
+	margin-top: 20px;
+	padding-top: 45px;
+	border-top: 1px solid #E2E2E2;
+}
+
+.stats {
+	text-align: center;
+}
+
+.submitAnswer > input {
+	display: block;
+	margin: 0px auto 10px auto;
+}
+
+.answers > input {
+	display: block;
+	margin: 45px auto 10px auto;
+	padding: 5px 20px;
+}
