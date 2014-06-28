@@ -1,3 +1,15 @@
+$(document).ready(function(){
+
+	$('.startGame input').on('click',game.start);
+
+	$('.answers input').on('click',function (event) {
+
+		game.advance($(this).val());
+
+	});
+
+});
+
 var game = (function(){
 
 	function updateConsole(  answers  ){
@@ -36,9 +48,25 @@ var game = (function(){
 
 			updateConsole(quiz.currentProblem.answers);
 
+			$('.startGame input').prop('value','Submit Answer');
+
 		},
 
-		advance: function(){},
+		advance: function(  guess  ){
+
+			var result = quiz.showAnswer(  guess  );
+
+			if (  result  ){
+
+				game.correct++;
+			
+			}
+
+			game.current++;
+
+			quiz.showQuestion(game.current);
+
+		},
 
 		end: function(){}
 
