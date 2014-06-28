@@ -92,15 +92,21 @@ var quiz = (function(){
 
 		},
 
-		loadQuestion: function(  currentQ  ){
+		showQuestion: function(  currentQ  ){
 
 			if (  $('.pokemon').hasClass('background')  ){
 
-				$('.pokemon').removeClass('background').find('.questionBody')
+				$('.pokemon').removeClass('background')
 
-				.append($('<img>').attr('src',''))
+				  .find('h2')
 
-				.append($('<img>').attr('src',''));
+				    .text("Guess This Pokemon!")
+
+				  .siblings('.questionBody')
+
+				    .append($('<img>').attr('src',''))
+
+				    .append($('<img>').attr('src',''));
 
 			}
 
@@ -109,6 +115,28 @@ var quiz = (function(){
 			$('.pokemon img:first-of-type').attr('src',quiz.currentProblem.question);
 
 			$('.pokemon img:last-of-type').attr('src','quizBuilder/images/questionMark.png');
+
+		},
+
+		showAnswer: function(  guess  ){
+
+			var handler = quiz.currentProblem.isCorrectAnswer( guess )
+
+			$('.pokemon img:first-of-type').attr('src',handler[1]);
+
+			if (  handler[0]  ){
+
+				$('.pokemon img:last-of-type').attr('src','quizBuilder/images/checkMark.png');
+
+				return true;				
+
+			} else {
+
+				$('.pokemon img:last-of-type').attr('src','quizBuilder/images/xMark.png');
+
+				return false;
+
+			}			
 
 		}
 
