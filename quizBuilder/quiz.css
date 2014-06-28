@@ -10,7 +10,10 @@
 }
 
 .pokemon.intro{
+	height: 485px;	
+}
+
+.background{
 	background: #fff URL('../gameHandler/images/intro.png') 0px 0px no-repeat;
 	background-size: 100%;
-	height: 485px;	
 }

@@ -64,7 +64,7 @@ var quiz = (function(){
 
 			this.isCorrectAnswer = function(  answer  ){
 
-				return [  answer == correctAnswer ? true : false,correctDisplay  ];
+				return [  answer == correctAnswer ? true : false,  correctDisplay  ];
 
 			}
 
@@ -84,9 +84,31 @@ var quiz = (function(){
 
 		},
 
+		currentProblem: undefined,
+
 		getProblem: function (  currentQ  ){
 
 			return problems[  currentQ  ];
+
+		},
+
+		loadQuestion: function(  currentQ  ){
+
+			if (  $('.pokemon').hasClass('background')  ){
+
+				$('.pokemon').removeClass('background').find('.questionBody')
+
+				.append($('<img>').attr('src',''))
+
+				.append($('<img>').attr('src',''));
+
+			}
+
+			quiz.currentProblem = quiz.getProblem(  currentQ  );
+
+			$('.pokemon img:first-of-type').attr('src',quiz.currentProblem.question);
+
+			$('.pokemon img:last-of-type').attr('src','quizBuilder/images/questionMark.png');
 
 		}
 
