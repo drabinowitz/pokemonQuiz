@@ -12,7 +12,9 @@
 	margin-top: 0;
 }
 
-.page-header a{
+.page-header input{
 	float: right;
 	margin: 18px 25px 0 0;
+	background: none;
+	border: none;
 }
