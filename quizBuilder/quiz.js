@@ -1,7 +1,5 @@
 var quiz = (function(){
 
-	var count = 0;
-
 	var problems = [];
 
 	var questionFeed = [
@@ -46,11 +44,7 @@ var quiz = (function(){
 
 	return{
 
-		totalQuestions: function(){
-
-			return count
-
-		},
+		count:0,
 
 		problem: function (  question,answers,correctAnswer_  ){
 
@@ -78,7 +72,7 @@ var quiz = (function(){
 
 				problems.push(  new quiz.problem(  questionFeed[0][i], questionFeed[1][i], questionFeed[2][i]  )  );
 
-				count++;
+				quiz.count++;
 
 			}
 
