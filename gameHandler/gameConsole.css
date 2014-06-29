@@ -23,3 +23,30 @@
 	margin: 45px auto 10px auto;
 	padding: 5px 20px;
 }
+
+.hide{
+	display:none;
+}
+
+.highlighted,.highlighted:focus,.highlighted:active,.highlighted:hover{
+	background-color: #EB1616;
+	background-image: linear-gradient(to bottom,#F04E4E 0,#EB1616 100%);
+}
+
+.endGame{
+	position: fixed;
+	left: 200px;
+	right: 200px;
+	top: 0;
+	bottom: 50px;
+	border: 1px solid #E2E2E2;
+	-webkit-box-shadow: rgba(102, 102, 102, 0.792157) 10px 10px 15px;
+	z-index: 200;
+	background: white;
+	text-align: center;
+	padding-top: 300px;
+}
+
+.endGame p{
+	padding: 10px 30%
+}

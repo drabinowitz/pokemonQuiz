@@ -58,7 +58,7 @@ var quiz = (function(){
 
 			this.isCorrectAnswer = function(  answer  ){
 
-				return [  answer == correctAnswer ? true : false,  correctDisplay  ];
+				return [  answer == correctAnswer ? true : false,  correctDisplay,  correctAnswer  ];
 
 			}
 
@@ -110,6 +110,8 @@ var quiz = (function(){
 
 			$('.pokemon img:last-of-type').attr('src','quizBuilder/images/questionMark.png');
 
+			$('.pokemon h2').text('Guess this Pokemon!');
+
 		},
 
 		showAnswer: function(  guess  ){
@@ -117,6 +119,8 @@ var quiz = (function(){
 			var handler = quiz.currentProblem.isCorrectAnswer( guess )
 
 			$('.pokemon img:first-of-type').attr('src',handler[1]);
+
+			$('.pokemon h2').text('It was ' + handler[2]);
 
 			if (  handler[0]  ){
 
