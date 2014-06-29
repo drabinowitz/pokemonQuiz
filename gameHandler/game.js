@@ -64,7 +64,9 @@ var game = (function(){
 
 			game.correct = 0;
 
-			$('.stats h4:first-of-type').text('Question ' + game.current + 1 + ' of ' + game.count);
+			$('.stats:first-of-type').text('Question ' + ( game.current + 1 ) + ' of ' + game.count);
+
+			$('.stats:last-of-type').text('Your Percentage Correct Will Be Here');
 
 			quiz.showQuestion(game.current);
 
@@ -98,10 +100,6 @@ var game = (function(){
 
 			game.current++;
 
-			$('.stats:first-of-type').text('Question ' + game.current + ' of ' + game.count);
-
-			$('.stats:last-of-type').text(100 * game.correct/game.current + '% Correct Answers');
-
 			if (  game.current == game.count  ){
 
 				game.end();
@@ -114,6 +112,8 @@ var game = (function(){
 
 			}
 
+			$('.stats:last-of-type').text(100 * game.correct/game.current + '% Correct Answers');
+
 		},
 
 		nextQuestion: function(  currentQ  ){
@@ -123,6 +123,8 @@ var game = (function(){
 			$('[value="Next Question"]').prop('value','Submit Answer');
 
 			$('.answers').removeClass('hide');
+
+			$('.stats:first-of-type').text('Question ' + (game.current + 1) + ' of ' + game.count);
 
 			updateConsole(quiz.currentProblem.answers);
 

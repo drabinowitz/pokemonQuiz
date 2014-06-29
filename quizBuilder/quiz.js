@@ -68,6 +68,8 @@ var quiz = (function(){
 
 			problems = [];
 
+			quiz.count = 0;
+
 			for (  var i = 0; i < questionFeed[0].length; i++  ){
 
 				problems.push(  new quiz.problem(  questionFeed[0][i], questionFeed[1][i], questionFeed[2][i]  )  );
